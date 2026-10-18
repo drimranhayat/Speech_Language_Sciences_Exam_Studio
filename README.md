@@ -4,6 +4,10 @@ A self-contained, GitHub Pages-ready revision website based on the eight supplie
 
 ## Included
 
+- **Eight complete lecture essays**, approximately 900–1,150 words each, with section navigation, reference links and cross-links to every lecture's concepts and MCQs.
+- Colourful local SVG icons throughout the glossary and lecture cards; no external icon downloads.
+- Adjustable essay text size, reading completion marks, clear content tabs and a mobile navigation grid.
+
 - **938 MCQs** across all eight lectures, with four options and one best answer.
 - **286 key concepts** with definitions, examples, distinctions and common misconceptions.
 - A gradual lecture sequence: **Easy → Moderate → Challenging**, plus difficulty and topic filters.
@@ -44,6 +48,8 @@ Accuracy uses the latest scored answer for each answered question. It is a revis
 - `index.html`, `styles.css`, `app.js`, `engine.js`: interface and study logic.
 - `data.js`: browser-ready question bank and glossary.
 - `data.json`: the same data in an editable, reusable format.
+- `essays.js` and `essays.json`: the eight original lecture essays.
+- `visuals.js`: lightweight topic-based SVG illustrations.
 - `COVERAGE.md`: lecture map, question counts, difficulty distribution and source scope.
 - `tools/`: reproducible Python generation source using the standard library.
 - `tests/`: Node.js data, scoring, state and interface smoke checks.
@@ -56,6 +62,8 @@ From this folder:
 node tests/check.js
 node tests/interface.js
 node --check app.js
+node tests/essays.js
+python3 tools/build_essays.py
 python3 tools/generate_bank.py
 ```
 
@@ -72,3 +80,5 @@ Open textbook content and official phonetic references support accessible concep
 Automated checks cover counts, unique IDs and stems within lectures, answer integrity, gradual difficulty ordering, reference links by ID, all 24 answer-display permutations, wrong-answer correction, import validation, JSON/JavaScript parity and lecture-tab contrast. DOM-free interaction smoke tests cover study, revealing, scoring, revision, bookmarks, glossary, progress and theme persistence.
 
 Responsive CSS is provided, but visual browser/device rendering was not tested in this environment.
+
+Essay reading marks and text-size preferences save separately on this browser. They do not alter MCQ scoring. The question-progress export/import continues to back up answers, viewed questions, bookmarks and the MCQ resume position.

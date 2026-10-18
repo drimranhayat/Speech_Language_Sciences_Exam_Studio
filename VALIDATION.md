@@ -17,3 +17,13 @@ Validated on 18 October 2026.
 - JavaScript syntax checks passed.
 
 These automated checks establish data and interaction properties, not independent expert review of every question. Browser rendering and physical mobile/tablet/desktop testing were not performed in this environment. Responsive CSS includes breakpoints for these screen sizes.
+
+## Essay and visual update
+
+- Eight original lecture essays: 8,219 words total, with 6–8 sections each.
+- Essay word counts, lecture mapping, source IDs and JavaScript/JSON parity verified.
+- All 286 glossary entries receive a local, topic-selected SVG icon; 20 distinct icon designs are used.
+- Essay index, individual lecture route, cross-navigation, text-size changes and read markers passed interaction smoke tests.
+- MCQ data, question IDs, answer keys and progress engine remain byte-for-byte unchanged from the earlier ZIP.
+- Main navigation uses a visible grid on small screens; lecture cards link separately to essays, glossary and MCQs.
+- Day/night styles and responsive reading layouts are included. Visual browser and physical-device testing remain unperformed.

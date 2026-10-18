@@ -71,3 +71,18 @@ The original slides are not redistributed in this source package.
 - [Andrew Radford et al., Linguistics: An Introduction, 2nd edition](https://www.cambridge.org/highereducation/books/linguistics/9AEE7EDA6697286AFE1B2399DFDD9020): Broader reading for linguistic structure and analysis. Publisher listing checked; useful alongside the shorter general introductions.
 - [John I. Saeed, Semantics, 5th edition](https://www.wiley-vch.de/en/areas-interest/humanities-social-sciences/semantics-978-1-119-70985-5): Specialist reading for Lectures 7–8: lexical relations, reference, semantic roles, truth, context and inference. Publisher contents and description checked.
 - [Stephen C. Levinson, Pragmatics](https://www.cambridge.org/highereducation/books/pragmatics/6D0011901AE9E92CBC1F5F21D7C598C3): More demanding reference for Lecture 8: deixis, implicature, presupposition and speech acts. Publisher contents and description checked. Use selected sections after the introductory material.
+
+## Complete lecture essays
+
+The Lecture Essays section provides a connected explanation for each lecture, followed by reference links and links to its complete glossary. Essay headings organize the reading without replacing it with isolated definitions.
+
+| Lecture | Words | Sections |
+|---|---:|---:|
+| 1 | 904 | 6 |
+| 2 | 911 | 6 |
+| 3 | 1014 | 7 |
+| 4 | 1129 | 8 |
+| 5 | 917 | 6 |
+| 6 | 1090 | 8 |
+| 7 | 1141 | 8 |
+| 8 | 1113 | 8 |
