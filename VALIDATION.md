@@ -27,3 +27,16 @@ These automated checks establish data and interaction properties, not independen
 - MCQ data, question IDs, answer keys and progress engine remain byte-for-byte unchanged from the earlier ZIP.
 - Main navigation uses a visible grid on small screens; lecture cards link separately to essays, glossary and MCQs.
 - Day/night styles and responsive reading layouts are included. Visual browser and physical-device testing remain unperformed.
+
+## Paged navigation update — 19 October 2026
+
+- A Show 10 / 20 / 50 / 100 selector controls page size, with 20 as default. The final page contains only remaining items.
+- Every question appears exactly once, tested for all four sizes at all set lengths 0–1,200 and across all eight lectures.
+- Page-size preference persists, and changing size preserves the active question, saved answers and option order.
+- Option clicks immediately reveal and score a single attempt; repeated clicks cannot change it or increment attempts.
+- Feedback updates only the attempted card. The next-question action smoothly scrolls/focuses its successor and crosses page boundaries correctly.
+- Direct page selection, question-map jumps, deep links, previous-question actions and next-unanswered navigation are included.
+- Wrong-answer revision opens blind attempts; later correct answers clear its queue.
+- Unscored reveal, bookmarks, essays, glossary, reading settings and original progress backups remain compatible.
+- Question and essay data are unchanged. The progress engine adds pagination without changing the answer schema.
+- Smooth scrolling respects reduced-motion preferences. Actual browser/device rendering remains untested.

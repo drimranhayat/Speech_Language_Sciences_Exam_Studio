@@ -14,7 +14,9 @@ A self-contained, GitHub Pages-ready revision website based on the eight supplie
 - Definition, application, misconception and worked-analysis questions; the same concepts are deliberately revisited from different angles.
 - Shuffled answer positions for every attempt, with correct scoring independent of displayed letters.
 - Shuffled question sets on request; the ordinary lecture route retains the gradual sequence.
-- Click-to-reveal answers and contextual explanations.
+- Clicking an option immediately scores the attempt and opens the correct answer and explanation inline.
+- Choose **Show 10 / 20 / 50 / 100 MCQs** per page (default 20). Your choice saves locally and keeps your current question. The final page shows the remaining available questions.
+- Smooth next-question navigation, automatic page-boundary transitions, page numbers, direct page selection, question map, jump-to-question and next-unanswered controls.
 - Wrong-answer revision, bookmarks, resume, question navigator and search.
 - Progress and day/night preferences saved locally; progress export/import for backups and moving devices.
 - Distinct lecture colours with tested white-on-colour contrast; responsive CSS for phones, tablets and desktop screens.
@@ -37,9 +39,9 @@ All links and asset paths are relative, so the site also supports GitHub project
 
 ## Study and scoring
 
-Select an option, then reveal the answer to score an attempt. Revealing without selecting is recorded as viewed, not as a correct answer. A later correct attempt removes an item from the wrong-answer queue while preserving its earlier-error flag and attempt count.
+Select an option to score the attempt and open the answer and explanation immediately. Further option clicks cannot rescore that attempt. Use **Retry question** for a new attempt with shuffled options. Revealing without selecting is recorded as viewed, not as a correct answer. A later correct attempt removes an item from the wrong-answer queue while preserving its earlier-error flag and attempt count.
 
-The wrong-answer route opens a new unselected attempt. Its question queue stays stable while you work through it; reopen the route to refresh the list. The default study view does not reveal the explanation automatically on returning, though your previous selected option may be displayed outside wrong-answer revision.
+The wrong-answer route opens a new unselected attempt. Its question queue stays stable while you work through it; reopen the route to refresh the list. Returning to a previously answered question in a normal lecture restores its selected answer and explanation. Wrong-answer review opens fresh, unselected attempts instead. Explanations stay open until you choose to continue; the site does not skip ahead before you can read them.
 
 Accuracy uses the latest scored answer for each answered question. It is a revision measure, not a proctored assessment. Browser storage is device/browser specific. **Progress → Export progress** downloads a JSON backup. Import replaces the current progress after confirmation.
 
@@ -63,6 +65,7 @@ node tests/check.js
 node tests/interface.js
 node --check app.js
 node tests/essays.js
+node tests/pagination.js
 python3 tools/build_essays.py
 python3 tools/generate_bank.py
 ```
@@ -82,3 +85,15 @@ Automated checks cover counts, unique IDs and stems within lectures, answer inte
 Responsive CSS is provided, but visual browser/device rendering was not tested in this environment.
 
 Essay reading marks and text-size preferences save separately on this browser. They do not alter MCQ scoring. The question-progress export/import continues to back up answers, viewed questions, bookmarks and the MCQ resume position.
+
+## Paged navigation update
+
+- Default lecture pages show 20 questions. Choose 10, 20, 50 or 100 using **MCQs per page**. For example, 94 questions at 20 per page become pages of 20, 20, 20, 20 and 14.
+- Question order still increases in editorial difficulty unless you request shuffling.
+- Final pages, wrong-answer queues, bookmarks and narrow filters can have fewer questions than the selected page size. Questions are never duplicated merely to fill a page.
+- Instant feedback updates the attempted question rather than rebuilding all question cards, preserving the order of its options and the surrounding page.
+- “Next question” scrolls and focuses the next card. From the last card of a page it opens the following page automatically. No timed auto-advance interrupts explanations.
+- Page controls are above and below the set; the question map, page selector, question-number jump and next-unanswered button provide direct routes.
+- Saved question IDs, answer keys, scoring schema, essays and glossary remain compatible with the previous version. Continue using the same hosting URL/browser to retain local progress.
+
+The selected MCQ page size is a browser-local preference and is separate from the progress export. Changing it preserves existing answers, open explanations, option order and the active question.
